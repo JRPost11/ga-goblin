@@ -8,9 +8,6 @@ from sklearn.impute import IterativeImputer
 
 import pygom
 
-# TODO SRBench complicance (ideally both new and old)
-# TODO simplification & finetuning...
-
 
 _GPU_AVAILABLE = pygom.has_gpu_support()
 
@@ -120,7 +117,7 @@ class SymbolicRegressor(BaseEstimator, RegressorMixin):
             X,
             Y,
             objectives=self.kwargs.get("objectives", "mse"),
-            linear_scaling=self.kwargs.get("linear_scaling", True),
+            linear_scaling=self.kwargs.get("linear_scaling", False),
             init=init,
             constant_init_lower_bound=self.kwargs.get(
                 "constant_init_lower_bound", constant_init_lower_bound
@@ -171,7 +168,7 @@ class SymbolicRegressor(BaseEstimator, RegressorMixin):
                         **self.kwargs.get("population_kwargs", {})
                     ),
                     ims_options=pygom.IMSOptions(**self.kwargs.get("ims_kwargs", {})),
-                    rv_options=pygom.RvOptions(**self.kwargs.get("rv_kwargs", {})),
+                    rv_options=pygom.RvOptions(enabled = False), # disabled since this implementation is not yet working correctly **self.kwargs.get("rv_kwargs", {})),
                     discrete_model=combined_fos,
                     continuous_model=vars(pygom)[
                         self.kwargs.get("continuous_model", "FullFOS")

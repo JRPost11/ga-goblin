@@ -8,7 +8,7 @@ name = "pygom"
 version = "0.1.0"
 description="pygom, goblin C++ library interface"
 readme = "README.md"
-authors = [ { name = "Johannes Koch", email = "johannes.koch@cwi.nl" } ]
+authors = [ { name = "Jasper Post", email = "jasper.r.post@gmail.com"}, { name = "Johannes Koch", email = "johannes.koch@cwi.nl" } ]
 requires-python = ">=3.7"
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -69,4 +69,4 @@ dev = [
 ]
 
 [tool.uv.sources]
-litgen = { git = "https://github.com/pthom/litgen" }
+litgen = { git = "https://github.com/pthom/litgen", rev="3d8b561" }
