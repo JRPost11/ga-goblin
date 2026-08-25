@@ -1,13 +1,13 @@
 # GP-GOMEA with GPU-Based Fitness Evaluations: Design and Performance Analysis
 
-This repository contains the source code and experimental results for the paper ["GP-GOMEA with GPU-Based Fitness Evaluations: Design and Performance Analysis"](https://arxiv.org/abs/2605.30954) accepted at PPSN 2026 and the master thesis titled ["GP-GOMEA with GPU-Based Fitness Evaluations"](https://resolver.tudelft.nl/uuid:bc05593f-34ac-4dc2-9cce-73ba4a201999).
+This repository contains the source code and experimental results for the paper ["GP-GOMEA with GPU-Based Fitness Evaluations: Design and Performance Analysis"](http://dx.doi.org/10.1007/978-3-032-36229-2_7)([arXiv preprint](https://arxiv.org/abs/2605.30954)) accepted at PPSN 2026 and the master thesis titled ["GP-GOMEA with GPU-Based Fitness Evaluations"](https://resolver.tudelft.nl/uuid:bc05593f-34ac-4dc2-9cce-73ba4a201999).
 
-> [!NOTE]
+> [!WARNING]
 > This is the code for the paper and thesis, a more user-friendly and complete (GP-)GOMEA library containing the contributions of this repository is currently under development.
 
 ## Installation
 
-This project supports Linux (and macOS without GPU support) and requires a recent C++ compiler with C++23 support. For GPU support, a CUDA compiler is needed (tested with g++ 15 and nvcc 13.2.86). With the toolchain in place, the Python bindings (supporting Python >=3.7) can be installed using:
+This project supports Linux (and macOS without GPU support) and requires a recent C++ compiler with C++23 support. For GPU support, a CUDA compiler is needed (tested with g++ 15 and nvcc 13.2.86). With the toolchain in place, the Python bindings can be installed using:
 
 ```bash
 pip install git+https://github.com/JRPost11/ga-goblin.git@dev#egg=pygom
@@ -86,6 +86,20 @@ This work is licensed under CC BY-NC-ND 4.0. To view a copy of this license, vis
 If you find this work useful, please cite the published version, the [master thesis for the extended work not in the paper](https://resolver.tudelft.nl/uuid:bc05593f-34ac-4dc2-9cce-73ba4a201999) or the arXiv preprint:
 
 ```
+@inbook{Post2026,
+  title = {GP-GOMEA with GPU-Based Fitness Evaluations: Design and Performance Analysis},
+  ISBN = {9783032362292},
+  ISSN = {1611-3349},
+  url = {http://dx.doi.org/10.1007/978-3-032-36229-2_7},
+  DOI = {10.1007/978-3-032-36229-2_7},
+  booktitle = {Parallel Problem Solving from Nature – PPSN XIX},
+  publisher = {Springer Nature Switzerland},
+  author = {Post,  Jasper and Koch,  Johannes and Bouter,  Anton and Alderliesten,  Tanja and Bosman,  Peter A.N.},
+  year = {2026},
+  month = Aug,
+  pages = {103–118}
+}
+
 @misc{https://doi.org/10.48550/arxiv.2605.30954,
   doi = {10.48550/ARXIV.2605.30954},
   url = {https://arxiv.org/abs/2605.30954},
